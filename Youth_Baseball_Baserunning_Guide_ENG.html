@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youth Baseball Baserunning Guide for Kids</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: #f0fdf4;
+        }
+        h1, h2, h3, h4, .font-heading {
+            font-family: 'Fredoka', cursive;
+        }
+        .pulse-btn {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+        }
+        .badge-run { background-color: #ef4444; color: white; }
+        .badge-tag { background-color: #3b82f6; color: white; }
+        .badge-halfway { background-color: #f59e0b; color: white; }
+    </style>
+</head>
+<body class="text-slate-800 min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <header class="bg-emerald-600 text-white shadow-lg border-b-4 border-emerald-800 py-6 px-4">
+        <div class="max-w-5xl mx-auto text-center">
+            <div class="flex justify-center items-center gap-3 mb-2">
+                <span class="text-4xl">⚾</span>
+                <h1 class="text-3xl md:text-5xl font-bold tracking-wide">Baserunning Hero!</h1>
+                <span class="text-4xl">🧢</span>
+            </div>
+            <p class="text-emerald-100 text-lg md:text-xl font-medium">
+                Learn what to do when you're on base! Simple guides for 3rd Grade Baseball Stars!
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="max-w-5xl mx-auto p-4 md:p-6 flex-grow w-full space-y-8">
+
+        <!-- Section 1: The Golden Rules -->
+        <section class="bg-white rounded-3xl p-6 shadow-md border-2 border-emerald-200">
+            <h2 class="text-2xl md:text-3xl font-bold text-emerald-800 text-center mb-6 flex items-center justify-center gap-2">
+                <span>🌟</span> The Golden Rules of Baserunning
+            </h2>
+
+            <!-- Special 2-Out Rule Callout -->
+            <div class="mb-6 bg-gradient-to-r from-amber-500 to-red-500 text-white rounded-2xl p-4 shadow-md flex items-center gap-4 border-2 border-yellow-300">
+                <div class="text-4xl md:text-5xl">⚡</div>
+                <div>
+                    <span class="bg-yellow-300 text-slate-900 font-extrabold text-xs px-2.5 py-0.5 rounded-full uppercase tracking-wider">Super Rule</span>
+                    <h3 class="text-xl md:text-2xl font-black">WITH 2 OUTS: ALWAYS RUN IMMEDIATELY! 🏃‍♂️💨</h3>
+                    <p class="text-sm md:text-base text-yellow-100 font-semibold">
+                        Don't tag up! Don't go half-way! If there are 2 outs, RUN as fast as you can on ANY hit!
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Rule 1: RUN -->
+                <div class="bg-red-50 border-4 border-red-400 rounded-2xl p-5 text-center flex flex-col justify-between hover:shadow-lg transition">
+                    <div>
+                        <span class="inline-block px-4 py-1 rounded-full text-lg font-bold bg-red-500 text-white mb-3 shadow">
+                            1. RUN! 🏃‍♂️💨
+                        </span>
+                        <h3 class="text-xl font-bold text-red-700 mb-2">Ground Balls & 2 Outs</h3>
+                        <p class="text-slate-700 font-semibold text-sm mb-4">
+                            Ground ball on grass OR 2 OUTS? Sprint to the next base as fast as you can!
+                        </p>
+                    </div>
+                    <!-- SVG Illustration -->
+                    <div class="bg-white rounded-xl p-3 border border-red-200 flex justify-center">
+                        <svg width="120" height="90" viewBox="0 0 120 90">
+                            <polygon points="60,10 100,50 60,80 20,50" fill="#22c55e" stroke="#e5e7eb" stroke-width="3"/>
+                            <path d="M 100 50 L 60 10" stroke="#ef4444" stroke-width="4" stroke-dasharray="4,4" fill="none" />
+                            <circle cx="100" cy="50" r="8" fill="#ef4444" />
+                            <text x="100" y="54" text-anchor="middle" fill="white" font-size="10" font-weight="bold">R</text>
+                            <polygon points="60,5 55,15 65,15" fill="#ef4444" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Rule 2: TAG UP -->
+                <div class="bg-blue-50 border-4 border-blue-400 rounded-2xl p-5 text-center flex flex-col justify-between hover:shadow-lg transition">
+                    <div>
+                        <span class="inline-block px-4 py-1 rounded-full text-lg font-bold bg-blue-500 text-white mb-3 shadow">
+                            2. TAG UP! 🛑 (0 or 1 Out)
+                        </span>
+                        <h3 class="text-xl font-bold text-blue-700 mb-2">High Deep Fly Balls</h3>
+                        <p class="text-slate-700 font-semibold text-sm mb-4">
+                            Keep your foot on the base. Wait until the fielder catches the ball, then RUN!
+                        </p>
+                    </div>
+                    <!-- SVG Illustration -->
+                    <div class="bg-white rounded-xl p-3 border border-blue-200 flex justify-center">
+                        <svg width="120" height="90" viewBox="0 0 120 90">
+                            <polygon points="60,10 100,50 60,80 20,50" fill="#22c55e" stroke="#e5e7eb" stroke-width="3"/>
+                            <rect x="92" y="42" width="16" height="16" fill="#ffffff" stroke="#3b82f6" stroke-width="2"/>
+                            <circle cx="100" cy="50" r="7" fill="#3b82f6" />
+                            <text x="100" y="53" text-anchor="middle" fill="white" font-size="9" font-weight="bold">FOOT</text>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Rule 3: HALF-WAY -->
+                <div class="bg-amber-50 border-4 border-amber-400 rounded-2xl p-5 text-center flex flex-col justify-between hover:shadow-lg transition">
+                    <div>
+                        <span class="inline-block px-4 py-1 rounded-full text-lg font-bold bg-amber-500 text-white mb-3 shadow">
+                            3. HALF-WAY! ⚖️ (0 or 1 Out)
+                        </span>
+                        <h3 class="text-xl font-bold text-amber-700 mb-2">Shallow Fly Balls</h3>
+                        <p class="text-slate-700 font-semibold text-sm mb-4">
+                            Not sure if caught? Take steps halfway to the next base and WATCH the fielder!
+                        </p>
+                    </div>
+                    <!-- SVG Illustration -->
+                    <div class="bg-white rounded-xl p-3 border border-amber-200 flex justify-center">
+                        <svg width="120" height="90" viewBox="0 0 120 90">
+                            <polygon points="60,10 100,50 60,80 20,50" fill="#22c55e" stroke="#e5e7eb" stroke-width="3"/>
+                            <circle cx="80" cy="30" r="8" fill="#f59e0b" />
+                            <text x="80" y="34" text-anchor="middle" fill="white" font-size="10" font-weight="bold">R</text>
+                            <path d="M 72 22 L 62 12" stroke="#f59e0b" stroke-width="2" />
+                            <path d="M 88 38 L 98 48" stroke="#f59e0b" stroke-width="2" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Interactive Field & Decision Simulator -->
+        <section class="bg-emerald-900 text-white rounded-3xl p-6 shadow-xl border-4 border-emerald-700">
+            <div class="text-center mb-6">
+                <span class="bg-yellow-400 text-emerald-950 font-bold px-3 py-1 rounded-full text-xs uppercase tracking-wider">Interactive Simulator</span>
+                <h2 class="text-3xl font-bold mt-1 text-yellow-300">What Should You Do?</h2>
+                <p class="text-emerald-100 text-sm">Select Out Count, Runners, and Hit Type to see the exact runner action!</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                
+                <!-- Controls Side (Left 5 Cols) -->
+                <div class="lg:col-span-5 bg-emerald-800 p-5 rounded-2xl border border-emerald-600 space-y-4">
+                    
+                    <!-- 1. Select Out Count -->
+                    <div>
+                        <label class="block font-bold text-yellow-200 mb-2 text-sm uppercase tracking-wide">
+                            Step 1: Choose Out Count 🔴
+                        </label>
+                        <select id="select-outs" onchange="updateSimulation()" class="w-full bg-white text-slate-800 font-bold p-3 rounded-xl border-2 border-yellow-400 text-base shadow focus:outline-none">
+                            <option value="0">0 Outs (Tag up / Half-way applies)</option>
+                            <option value="1">1 Out (Tag up / Half-way applies)</option>
+                            <option value="2">2 Outs (ALWAYS RUN ON ANYTHING! 🔥)</option>
+                        </select>
+                    </div>
+
+                    <!-- 2. Select Runner Setup -->
+                    <div>
+                        <label class="block font-bold text-yellow-200 mb-2 text-sm uppercase tracking-wide">
+                            Step 2: Choose Runners on Base 🏃
+                        </label>
+                        <select id="select-runners" onchange="updateSimulation()" class="w-full bg-white text-slate-800 font-bold p-3 rounded-xl border-2 border-yellow-400 text-base shadow focus:outline-none">
+                            <option value="r1">Runner on 1st Base Only (Forced)</option>
+                            <option value="r2">Runner on 2nd Base Only (1st Open)</option>
+                            <option value="r3">Runner on 3rd Base Only (1st Open)</option>
+                            <option value="loaded">Bases Loaded (1st, 2nd & 3rd Full)</option>
+                        </select>
+                    </div>
+
+                    <!-- 3. Select Hit Type -->
+                    <div>
+                        <label class="block font-bold text-yellow-200 mb-2 text-sm uppercase tracking-wide">
+                            Step 3: Choose Hit Type ⚾
+                        </label>
+                        <select id="select-hit" onchange="updateSimulation()" class="w-full bg-white text-slate-800 font-bold p-3 rounded-xl border-2 border-yellow-400 text-base shadow focus:outline-none">
+                            <option value="grounder">Ground Ball (Rolling on grass)</option>
+                            <option value="deep-fly">Deep Fly Ball (Far in outfield)</option>
+                            <option value="shallow-fly">Shallow Fly Ball (Close to infield)</option>
+                        </select>
+                    </div>
+
+                    <!-- Decision Box Result -->
+                    <div id="action-result-card" class="p-4 rounded-xl bg-slate-800 border-2 border-slate-600 text-center space-y-2">
+                        <span id="result-badge" class="inline-block px-4 py-1 rounded-full text-lg font-black bg-slate-600 text-white">
+                            SELECT ABOVE
+                        </span>
+                        <h4 id="result-title" class="text-lg font-bold text-yellow-300">---</h4>
+                        <p id="result-desc" class="text-sm text-slate-200 leading-snug">Choose an option above to see instructions.</p>
+                    </div>
+                </div>
+
+                <!-- Canvas Field Representation (Right 7 Cols) -->
+                <div class="lg:col-span-7 flex flex-col items-center justify-center bg-emerald-950 p-4 rounded-2xl border border-emerald-700">
+                    <canvas id="baseballField" width="360" height="360" class="max-w-full h-auto rounded-lg shadow-inner bg-emerald-800"></canvas>
+                    <p class="text-xs text-emerald-300 mt-2 font-semibold text-center">
+                        🔴 Red = Base Runner | 🟡 Yellow = Target Move
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Situational Rules Cheat Sheet -->
+        <section class="bg-white rounded-3xl p-6 shadow-md border-2 border-emerald-200 space-y-6">
+            <h2 class="text-2xl md:text-3xl font-bold text-emerald-800 text-center flex items-center justify-center gap-2">
+                <span>📋</span> Situational Cheat Sheet by Out Count
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- 0 or 1 Out Rule Box -->
+                <div class="border-2 border-emerald-300 rounded-2xl p-4 bg-emerald-50/50 space-y-3">
+                    <div class="flex items-center gap-2 mb-1">
+                        <span class="bg-emerald-600 text-white font-bold px-3 py-1 rounded-full text-xs">0 OUTS or 1 OUT</span>
+                        <h3 class="font-bold text-lg text-emerald-900">Be Careful & Read the Play</h3>
+                    </div>
+                    
+                    <div class="bg-white p-3 rounded-xl border border-emerald-200">
+                        <strong class="text-emerald-800 block text-sm">Forced Runners (Runner on 1st):</strong>
+                        <p class="text-xs text-slate-600 mt-1">Grounder? <strong>MUST RUN!</strong> Fly Ball? Tag up (deep) or Go Half-Way (shallow).</p>
+                    </div>
+
+                    <div class="bg-white p-3 rounded-xl border border-emerald-200">
+                        <strong class="text-emerald-800 block text-sm">Unforced Runners (1st Base Empty):</strong>
+                        <p class="text-xs text-slate-600 mt-1">Grounder? Hold if hit in front, run if hit behind. Runner on 3rd ALWAYS tags up on deep flies!</p>
+                    </div>
+                </div>
+
+                <!-- 2 Out Rule Box -->
+                <div class="border-2 border-red-300 rounded-2xl p-4 bg-red-50/50 space-y-3">
+                    <div class="flex items-center gap-2 mb-1">
+                        <span class="bg-red-600 text-white font-bold px-3 py-1 rounded-full text-xs">2 OUTS (CRUCIAL)</span>
+                        <h3 class="font-bold text-lg text-red-900">NO Tag Up & NO Half-Way!</h3>
+                    </div>
+                    
+                    <div class="bg-white p-3 rounded-xl border border-red-200">
+                        <strong class="text-red-700 block text-sm">Sprint on ANY hit instantly!</strong>
+                        <p class="text-xs text-slate-600 mt-1">
+                            Why? If the fly ball is caught, it's the 3rd out and the inning ends anyway! If it's dropped, you get a huge head start to score!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Replayable Pop Quiz -->
+        <section class="bg-amber-100 rounded-3xl p-6 shadow-md border-4 border-amber-300 text-slate-800">
+            <div class="text-center mb-6">
+                <span class="bg-amber-500 text-white font-bold px-3 py-1 rounded-full text-xs uppercase tracking-wide">Unlimited Practice</span>
+                <h2 class="text-3xl font-bold text-amber-900 mt-1">Test Your Baserunning IQ! 🧠</h2>
+                <p class="text-amber-800 text-sm mt-1">Answer 5 random scenarios to win stars! Replay as many times as you like.</p>
+            </div>
+
+            <div id="quiz-container" class="max-w-2xl mx-auto bg-white p-6 rounded-2xl shadow-md border border-amber-200">
+                
+                <!-- Quiz Header -->
+                <div id="quiz-header" class="flex justify-between items-center mb-4 border-b border-slate-100 pb-3">
+                    <span id="quiz-progress-text" class="font-bold text-amber-800 text-sm">Question 1 of 5</span>
+                    <span id="quiz-score-text" class="bg-amber-200 text-amber-900 font-bold px-3 py-1 rounded-full text-xs">Score: 0 / 5</span>
+                </div>
+
+                <!-- Active Question -->
+                <div id="quiz-active-area">
+                    <div id="quiz-situation-badge" class="inline-block bg-slate-100 text-slate-700 font-bold text-xs px-3 py-1 rounded-md mb-2 border">
+                        Situation Setup
+                    </div>
+                    <h3 id="quiz-question-text" class="font-bold text-lg mb-4 text-slate-800">
+                        Question loading...
+                    </h3>
+                    <div id="quiz-options-container" class="space-y-2.5">
+                        <!-- Dynamic options -->
+                    </div>
+                </div>
+
+                <!-- Feedback Area -->
+                <div id="quiz-feedback" class="hidden mt-4 p-4 rounded-xl font-bold text-center transition-all">
+                    <p id="quiz-feedback-text"></p>
+                    <button id="next-q-btn" onclick="nextQuestion()" class="mt-3 bg-amber-500 hover:bg-amber-600 text-white font-bold px-6 py-2 rounded-xl text-sm shadow transition">
+                        Next Question ➡️
+                    </button>
+                </div>
+
+                <!-- End Screen -->
+                <div id="quiz-result-screen" class="hidden text-center py-4 space-y-4">
+                    <div class="text-5xl" id="result-emoji">🏆</div>
+                    <h3 id="result-heading" class="text-2xl font-black text-slate-800">Round Completed!</h3>
+                    <p id="result-score-summary" class="text-lg font-bold text-amber-800">You scored 5 out of 5!</p>
+                    <p id="result-message" class="text-slate-600 text-sm max-w-md mx-auto">
+                        Amazing job! You are a master baserunner!
+                    </p>
+                    <button onclick="startQuizRound()" class="pulse-btn bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-lg px-8 py-3 rounded-2xl shadow-lg transition flex items-center justify-center gap-2 mx-auto">
+                        <span>Play Again! 🔄</span>
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-emerald-900 text-emerald-200 py-6 text-center text-sm border-t-2 border-emerald-800">
+        <p>⚾ Created for Primary 3rd Grade Baseball Players & Coaches ⚾</p>
+    </footer>
+
+    <!-- JavaScript logic -->
+    <script>
+        const canvas = document.getElementById('baseballField');
+        const ctx = canvas.getContext('2d');
+
+        const bases = {
+            home: { x: 180, y: 300, name: 'Home' },
+            first: { x: 270, y: 210, name: '1st' },
+            second: { x: 180, y: 120, name: '2nd' },
+            third: { x: 90, y: 210, name: '3rd' }
+        };
+
+        function drawField(outs = 0, runners = [], moves = []) {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Outfield Grass
+            ctx.fillStyle = '#15803d';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Infield Dirt Diamond
+            ctx.fillStyle = '#b45309';
+            ctx.beginPath();
+            ctx.moveTo(bases.home.x, bases.home.y + 15);
+            ctx.lineTo(bases.first.x + 15, bases.first.y);
+            ctx.lineTo(bases.second.x, bases.second.y - 15);
+            ctx.lineTo(bases.third.x - 15, bases.third.y);
+            ctx.closePath();
+            ctx.fill();
+
+            // Infield Grass
+            ctx.fillStyle = '#16a34a';
+            ctx.beginPath();
+            ctx.moveTo(bases.home.x, bases.home.y - 15);
+            ctx.lineTo(bases.first.x - 15, bases.first.y);
+            ctx.lineTo(bases.second.x, bases.second.y + 15);
+            ctx.lineTo(bases.third.x + 15, bases.third.y);
+            ctx.closePath();
+            ctx.fill();
+
+            // Base Lines
+            ctx.strokeStyle = '#ffffff';
+            ctx.lineWidth = 3;
+            ctx.beginPath();
+            ctx.moveTo(bases.home.x, bases.home.y);
+            ctx.lineTo(bases.first.x, bases.first.y);
+            ctx.lineTo(bases.second.x, bases.second.y);
+            ctx.lineTo(bases.third.x, bases.third.y);
+            ctx.closePath();
+            ctx.stroke();
+
+            // Draw OUT lights on scoreboard inside canvas top
+            ctx.fillStyle = '#0f172a';
+            ctx.fillRect(100, 10, 160, 32);
+            ctx.strokeStyle = '#334155';
+            ctx.lineWidth = 2;
+            ctx.strokeRect(100, 10, 160, 32);
+
+            ctx.fillStyle = '#f8fafc';
+            ctx.font = 'bold 12px Fredoka';
+            ctx.textAlign = 'left';
+            ctx.fillText('OUTS:', 110, 30);
+
+            // Out Count Lights (Red LEDs)
+            for (let i = 0; i < 2; i++) {
+                ctx.beginPath();
+                ctx.arc(175 + (i * 22), 26, 7, 0, Math.PI * 2);
+                if (i < outs) {
+                    ctx.fillStyle = '#ef4444'; // Lit RED LED
+                    ctx.shadowColor = '#ef4444';
+                    ctx.shadowBlur = 8;
+                } else {
+                    ctx.fillStyle = '#334155'; // Unlit
+                    ctx.shadowBlur = 0;
+                }
+                ctx.fill();
+                ctx.shadowBlur = 0;
+            }
+
+            // Draw Bases
+            for (let b in bases) {
+                ctx.fillStyle = '#ffffff';
+                ctx.save();
+                ctx.translate(bases[b].x, bases[b].y);
+                ctx.rotate(45 * Math.PI / 180);
+                ctx.fillRect(-8, -8, 16, 16);
+                ctx.restore();
+
+                ctx.fillStyle = '#ffffff';
+                ctx.font = 'bold 12px Fredoka';
+                ctx.textAlign = 'center';
+                ctx.fillText(bases[b].name, bases[b].x, bases[b].y + (b === 'home' ? 22 : -14));
+            }
+
+            // Draw Movements / Arrows
+            moves.forEach(m => {
+                ctx.strokeStyle = '#facc15';
+                ctx.lineWidth = 4;
+                ctx.setLineDash([6, 4]);
+                ctx.beginPath();
+                ctx.moveTo(m.from.x, m.from.y);
+                ctx.lineTo(m.to.x, m.to.y);
+                ctx.stroke();
+                ctx.setLineDash([]);
+
+                ctx.fillStyle = '#facc15';
+                ctx.beginPath();
+                ctx.arc(m.to.x, m.to.y, 8, 0, Math.PI * 2);
+                ctx.fill();
+            });
+
+            // Draw Active Runners
+            runners.forEach(r => {
+                ctx.fillStyle = '#ef4444';
+                ctx.strokeStyle = '#ffffff';
+                ctx.lineWidth = 2;
+                ctx.beginPath();
+                ctx.arc(r.x, r.y, 11, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.stroke();
+
+                ctx.fillStyle = '#ffffff';
+                ctx.font = 'bold 10px Nunito';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText('🏃', r.x, r.y);
+            });
+        }
+
+        function updateSimulation() {
+            const outs = parseInt(document.getElementById('select-outs').value);
+            const runnerSetup = document.getElementById('select-runners').value;
+            const hitType = document.getElementById('select-hit').value;
+
+            const badge = document.getElementById('result-badge');
+            const title = document.getElementById('result-title');
+            const desc = document.getElementById('result-desc');
+
+            let activeRunners = [];
+            let moveTargets = [];
+
+            badge.className = "inline-block px-4 py-1 rounded-full text-lg font-black shadow ";
+
+            // 2 OUT RULE: Always run on EVERYTHING!
+            if (outs === 2) {
+                badge.textContent = "RUN IMMEDIATELY! 🏃‍♂️💨";
+                badge.classList.add("badge-run");
+                title.textContent = "2 OUTS RULE: No Tag Up Necessary!";
+                desc.textContent = "With 2 outs, run as fast as you can on ANY hit (grounder or fly ball)! If caught, the inning is over anyway!";
+
+                if (runnerSetup === 'r1') {
+                    activeRunners.push(bases.first);
+                    moveTargets.push({ from: bases.first, to: bases.second });
+                } else if (runnerSetup === 'r2') {
+                    activeRunners.push(bases.second);
+                    moveTargets.push({ from: bases.second, to: bases.third });
+                } else if (runnerSetup === 'r3') {
+                    activeRunners.push(bases.third);
+                    moveTargets.push({ from: bases.third, to: bases.home });
+                } else if (runnerSetup === 'loaded') {
+                    activeRunners.push(bases.first, bases.second, bases.third);
+                    moveTargets.push(
+                        { from: bases.first, to: bases.second },
+                        { from: bases.second, to: bases.third },
+                        { from: bases.third, to: bases.home }
+                    );
+                }
+            } else {
+                // 0 or 1 Out Rules
+                if (hitType === 'grounder') {
+                    if (runnerSetup === 'r1' || runnerSetup === 'loaded') {
+                        badge.textContent = "RUN HARD! 🏃‍♂️💨";
+                        badge.classList.add("badge-run");
+                        title.textContent = "Forced Play - Advance Immediately!";
+                        desc.textContent = "You MUST run because a trailing runner needs your base!";
+                    } else {
+                        badge.textContent = "READ THE FIELD! 👁️";
+                        badge.classList.add("badge-halfway");
+                        title.textContent = "Unforced Ground Ball";
+                        desc.textContent = "Hit behind you (right field)? RUN! Hit in front of you (shortstop/3rd)? HOLD!";
+                    }
+                } else if (hitType === 'deep-fly') {
+                    badge.textContent = "TAG UP! 🛑";
+                    badge.classList.add("badge-tag");
+                    title.textContent = "Deep Fly Ball (0 or 1 Out)";
+                    desc.textContent = "Keep your foot on base! The instant the fielder catches the ball, take off!";
+                } else if (hitType === 'shallow-fly') {
+                    badge.textContent = "GO HALF-WAY! ⚖️";
+                    badge.classList.add("badge-halfway");
+                    title.textContent = "Shallow Fly Ball (0 or 1 Out)";
+                    desc.textContent = "Stand halfway between bases. Watch the ball! Dropped -> RUN! Caught -> SPRINT BACK!";
+                }
+
+                // Target position visual calculations for 0/1 out
+                if (runnerSetup === 'r1') {
+                    activeRunners.push(bases.first);
+                    if (hitType === 'grounder') moveTargets.push({ from: bases.first, to: bases.second });
+                    if (hitType === 'shallow-fly') moveTargets.push({ from: bases.first, to: { x: 225, y: 165 } });
+                    if (hitType === 'deep-fly') moveTargets.push({ from: bases.first, to: bases.first });
+                } else if (runnerSetup === 'r2') {
+                    activeRunners.push(bases.second);
+                    if (hitType === 'grounder') moveTargets.push({ from: bases.second, to: bases.third });
+                    if (hitType === 'shallow-fly') moveTargets.push({ from: bases.second, to: { x: 135, y: 165 } });
+                    if (hitType === 'deep-fly') moveTargets.push({ from: bases.second, to: bases.third });
+                } else if (runnerSetup === 'r3') {
+                    activeRunners.push(bases.third);
+                    if (hitType === 'deep-fly' || hitType === 'grounder') moveTargets.push({ from: bases.third, to: bases.home });
+                    if (hitType === 'shallow-fly') moveTargets.push({ from: bases.third, to: { x: 135, y: 255 } });
+                } else if (runnerSetup === 'loaded') {
+                    activeRunners.push(bases.first, bases.second, bases.third);
+                    if (hitType === 'grounder') {
+                        moveTargets.push(
+                            { from: bases.first, to: bases.second },
+                            { from: bases.second, to: bases.third },
+                            { from: bases.third, to: bases.home }
+                        );
+                    } else if (hitType === 'deep-fly') {
+                        moveTargets.push({ from: bases.third, to: bases.home });
+                    } else {
+                        moveTargets.push(
+                            { from: bases.first, to: { x: 225, y: 165 } },
+                            { from: bases.second, to: { x: 135, y: 165 } },
+                            { from: bases.third, to: { x: 135, y: 255 } }
+                        );
+                    }
+                }
+            }
+
+            drawField(outs, activeRunners, moveTargets);
+        }
+
+        const quizBank = [
+            {
+                tag: "2 OUTS SCENARIO ⚡",
+                q: "There are 2 OUTS. You are on 2nd base. The batter hits a high fly ball to left field. What do you do?",
+                options: [
+                    { text: "RUN as fast as you can immediately!", correct: true },
+                    { text: "Stay on 2nd base and tag up.", correct: false },
+                    { text: "Walk half-way and wait.", correct: false }
+                ],
+                explanation: "BOOM! With 2 OUTS, always RUN immediately! If it's caught the inning ends, but if dropped you score easily!"
+            },
+            {
+                tag: "2 OUTS SCENARIO ⚡",
+                q: "There are 2 OUTS with runners on 1st & 3rd. The batter hits a grounder to shortstop. What should you do?",
+                options: [
+                    { text: "Sprint hard to the next base!", correct: true },
+                    { text: "Wait on 3rd base.", correct: false },
+                    { text: "Stop and watch the ball.", correct: false }
+                ],
+                explanation: "Correct! With 2 outs, run hard on ANY contact!"
+            },
+            {
+                tag: "0 OUTS - Runner on 1st",
+                q: "There are 0 OUTS and you are on 1st Base. A ground ball is hit to Shortstop. What do you do?",
+                options: [
+                    { text: "Stay on 1st base and wait.", correct: false },
+                    { text: "RUN fast to 2nd Base immediately!", correct: true },
+                    { text: "Walk half-way and watch.", correct: false }
+                ],
+                explanation: "Correct! Because you are forced by the batter behind you, you MUST run to 2nd base right away!"
+            },
+            {
+                tag: "1 OUT - Runner on 3rd",
+                q: "There is 1 OUT and you are on 3rd Base. The batter hits a high, DEEP fly ball to center field. What do you do?",
+                options: [
+                    { text: "Keep your foot on 3rd base (Tag Up) and run Home after the catch!", correct: true },
+                    { text: "Run Home immediately while the ball is in the air.", correct: false },
+                    { text: "Run back to the dugout.", correct: false }
+                ],
+                explanation: "Spot on! Tag up on 3rd base! Wait for the catch, then sprint home to score!"
+            },
+            {
+                tag: "0 OUTS - Runner on 2nd",
+                q: "There are 0 OUTS and you are on 2nd Base (1st base is EMPTY). A shallow fly ball is hit. What should you do?",
+                options: [
+                    { text: "Run straight to 3rd base.", correct: false },
+                    { text: "Take a half-way lead and watch if it's caught or dropped.", correct: true },
+                    { text: "Run back to 1st base.", correct: false }
+                ],
+                explanation: "Great job! Go half-way! If dropped, run to 3rd. If caught, hurry back to 2nd!"
+            },
+            {
+                tag: "1 OUT - Bases Loaded",
+                q: "1 OUT with Bases Loaded. A ground ball is hit to 2nd base. What must ALL runners do?",
+                options: [
+                    { text: "All runners stay where they are.", correct: false },
+                    { text: "All runners RUN immediately to the next base!", correct: true },
+                    { text: "Only the runner on 3rd runs.", correct: false }
+                ],
+                explanation: "Awesome! Bases loaded means EVERY runner is forced to advance on a ground ball!"
+            },
+            {
+                tag: "0 OUTS - Runner on 2nd",
+                q: "There are 0 OUTS and you are on 2nd base (1st base empty). Grounder hit straight to 3rd base. What do you do?",
+                options: [
+                    { text: "Run straight into 3rd base.", correct: false },
+                    { text: "HOLD your base so you don't get tagged out!", correct: true },
+                    { text: "Run back to 1st base.", correct: false }
+                ],
+                explanation: "Smart decision! Since 1st base was empty, you are NOT forced. Hold base on grounders in front of you!"
+            },
+            {
+                tag: "Half-Way Rule",
+                q: "You go HALF-WAY with 1 Out. The outfielder catches the ball. What do you do NEXT?",
+                options: [
+                    { text: "Keep running to the next base.", correct: false },
+                    { text: "Sprint BACK to your original base before they throw the ball there!", correct: true },
+                    { text: "Freeze in the middle.", correct: false }
+                ],
+                explanation: "Right on! If the ball is caught, you must retag your original base before the defense throws it there!"
+            }
+        ];
+
+        let currentQuestions = [];
+        let currentQIndex = 0;
+        let quizScore = 0;
+
+        function shuffle(array) {
+            return array.sort(() => Math.random() - 0.5);
+        }
+
+        function startQuizRound() {
+            currentQuestions = shuffle([...quizBank]).slice(0, 5);
+            currentQIndex = 0;
+            quizScore = 0;
+
+            document.getElementById('quiz-active-area').classList.remove('hidden');
+            document.getElementById('quiz-header').classList.remove('hidden');
+            document.getElementById('quiz-result-screen').classList.add('hidden');
+            document.getElementById('quiz-feedback').classList.add('hidden');
+
+            renderQuestion();
+        }
+
+        function renderQuestion() {
+            const qData = currentQuestions[currentQIndex];
+
+            document.getElementById('quiz-progress-text').textContent = `Question ${currentQIndex + 1} of 5`;
+            document.getElementById('quiz-score-text').textContent = `Score: ${quizScore} / 5`;
+            document.getElementById('quiz-situation-badge').textContent = qData.tag;
+            document.getElementById('quiz-question-text').textContent = `${currentQIndex + 1}. ${qData.q}`;
+
+            document.getElementById('quiz-feedback').classList.add('hidden');
+
+            const optionsContainer = document.getElementById('quiz-options-container');
+            optionsContainer.innerHTML = '';
+
+            const shuffledOptions = shuffle([...qData.options]);
+
+            shuffledOptions.forEach((opt, idx) => {
+                const btn = document.createElement('button');
+                btn.className = "w-full text-left p-3 rounded-xl border-2 border-slate-200 hover:border-amber-400 hover:bg-amber-50 font-semibold transition flex items-center gap-2 text-sm md:text-base";
+                btn.innerHTML = `<span class="bg-amber-200 text-amber-900 rounded-lg px-2 py-0.5 text-xs font-bold">${String.fromCharCode(65 + idx)}</span> ${opt.text}`;
+                btn.onclick = () => handleAnswer(opt.correct, qData.explanation, btn);
+                optionsContainer.appendChild(btn);
+            });
+        }
+
+        function handleAnswer(isCorrect, explanation, selectedBtn) {
+            const allBtns = document.getElementById('quiz-options-container').querySelectorAll('button');
+            allBtns.forEach(b => {
+                b.disabled = true;
+                b.classList.add('opacity-60', 'cursor-not-allowed');
+            });
+
+            const feedback = document.getElementById('quiz-feedback');
+            const feedbackText = document.getElementById('quiz-feedback-text');
+            feedback.classList.remove('hidden');
+
+            if (isCorrect) {
+                quizScore++;
+                selectedBtn.classList.remove('opacity-60');
+                selectedBtn.classList.add('bg-emerald-100', 'border-emerald-500', 'text-emerald-900');
+                feedback.className = "mt-4 p-4 rounded-xl font-bold text-center bg-emerald-100 text-emerald-800 border-2 border-emerald-400";
+                feedbackText.textContent = `🎉 ${explanation}`;
+                if (typeof confetti === 'function') {
+                    confetti({ particleCount: 35, spread: 50, origin: { y: 0.8 } });
+                }
+            } else {
+                selectedBtn.classList.remove('opacity-60');
+                selectedBtn.classList.add('bg-red-100', 'border-red-500', 'text-red-900');
+                feedback.className = "mt-4 p-4 rounded-xl font-bold text-center bg-red-100 text-red-800 border-2 border-red-400";
+                feedbackText.textContent = `❌ Not quite! Remember the 2-out and tagging rules!`;
+            }
+
+            document.getElementById('quiz-score-text').textContent = `Score: ${quizScore} / 5`;
+        }
+
+        function nextQuestion() {
+            currentQIndex++;
+            if (currentQIndex < currentQuestions.length) {
+                renderQuestion();
+            } else {
+                showQuizResults();
+            }
+        }
+
+        function showQuizResults() {
+            document.getElementById('quiz-active-area').classList.add('hidden');
+            document.getElementById('quiz-header').classList.add('hidden');
+            document.getElementById('quiz-feedback').classList.add('hidden');
+
+            const resultScreen = document.getElementById('quiz-result-screen');
+            const emoji = document.getElementById('result-emoji');
+            const heading = document.getElementById('result-heading');
+            const summary = document.getElementById('result-score-summary');
+            const message = document.getElementById('result-message');
+
+            resultScreen.classList.remove('hidden');
+            summary.textContent = `You scored ${quizScore} out of 5!`;
+
+            if (quizScore === 5) {
+                emoji.textContent = "🏆 ⭐⭐⭐";
+                heading.textContent = "PERFECT SCORE!";
+                message.textContent = "You are a Baserunning Master! You know every out count play perfectly!";
+                if (typeof confetti === 'function') {
+                    confetti({ particleCount: 100, spread: 80, origin: { y: 0.6 } });
+                }
+            } else if (quizScore >= 3) {
+                emoji.textContent = "⚾ ⭐⭐";
+                heading.textContent = "GREAT JOB!";
+                message.textContent = "Awesome baserunning IQ! Play another round to get a 5/5!";
+            } else {
+                emoji.textContent = "🧢 ⭐";
+                heading.textContent = "KEEP PRACTICING!";
+                message.textContent = "Good effort! Remember the 2-Out golden rule and try again!";
+            }
+        }
+
+        window.onload = function() {
+            updateSimulation();
+            startQuizRound();
+        };
+    </script>
+</body>
+</html>
